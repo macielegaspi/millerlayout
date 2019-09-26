@@ -1,0 +1,41 @@
+/* the PARENT's display value tells the children how to arrange themselves */
+/* when the screen is large, we want the PARENT to tell it's CHILDREN
+to be side-by-side */
+body {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+}
+
+.minirow {
+	height: 25%;
+	width: 100%;
+}
+
+.row {
+	height: 50%;
+	width: 100%;
+}
+
+.kermit {background-color: #C3DD63;}
+
+.sage {background: #A4AF69;}
+
+.vomit {background: #7FB069;}
+
+.apple {background: #CC444B;}
+
+.slate {background: #DADDD8;}
+
+.yella {background: #EDE580;}
+
+
+/* when the screen gets small, we want the PARENT to tell it's CHILDREN
+to stack on top of each other */
+@media only screen and (max-width: 375px) {
+  .minirow {
+	height: calc(100%/7);
+	width: 100%;
+	}
+}
